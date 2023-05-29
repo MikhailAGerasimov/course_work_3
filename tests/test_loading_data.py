@@ -1,10 +1,9 @@
-import pytest, json, pathlib
+import pytest
 from utils import loading_data
 
 
 def test_load_data():
-    path = pathlib.Path(pathlib.Path.cwd(), 'operations.json')
-    assert loading_data.load_data(path) == [
+    assert loading_data.load_data('operations_test.json') == [
             {
                 "id": 441945886,
                 "state": "EXECUTED",
